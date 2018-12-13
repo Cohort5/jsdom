@@ -1,0 +1,457 @@
+plc5:~/workspace $
+plc5:~/workspace $ cd javascript101
+plc5:~/workspace/javascript101 (master) $ mkdir jsdom
+plc5:~/workspace/javascript101 (master) $ cd jsdom
+plc5:~/workspace/javascript101/jsdom (master) $
+plc5:~/workspace/javascript101/jsdom (master) $ git init
+Initialized empty Git repository in /home/ubuntu/workspace/javascript101/jsdom/.git/
+plc5:~/workspace/javascript101/jsdom (master) $ curl -LO https://github.com/iamshaunjp/JavaScript-DOM-Tutorial.git
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   178  100   178    0     0   1274      0 --:--:-- --:--:-- --:--:--  1280
+  0     0    0 75411    0     0   155k      0 --:--:-- --:--:-- --:--:-- 1443k
+plc5:~/workspace/javascript101/jsdom (master) $ curl -LOhttps://github.com/iamshaunjp/JavaScript-DOM-Tutorial/archive/master.zip
+Usage: curl [options...] <url>
+Options: (H) means HTTP/HTTPS only, (F) means FTP only
+     --anyauth       Pick "any" authentication method (H)
+ -a, --append        Append to target file when uploading (F/SFTP)
+     --basic         Use HTTP Basic Authentication (H)
+     --cacert FILE   CA certificate to verify peer against (SSL)
+     --capath DIR    CA directory to verify peer against (SSL)
+ -E, --cert CERT[:PASSWD] Client certificate file and password (SSL)
+     --cert-type TYPE Certificate file type (DER/PEM/ENG) (SSL)
+     --ciphers LIST  SSL ciphers to use (SSL)
+     --compressed    Request compressed response (using deflate or gzip)
+ -K, --config FILE   Specify which config file to read
+     --connect-timeout SECONDS  Maximum time allowed for connection
+ -C, --continue-at OFFSET  Resumed transfer offset
+ -b, --cookie STRING/FILE  String or file to read cookies from (H)
+ -c, --cookie-jar FILE  Write cookies to this file after operation (H)
+     --create-dirs   Create necessary local directory hierarchy
+     --crlf          Convert LF to CRLF in upload
+     --crlfile FILE  Get a CRL list in PEM format from the given file
+ -d, --data DATA     HTTP POST data (H)
+     --data-ascii DATA  HTTP POST ASCII data (H)
+     --data-binary DATA  HTTP POST binary data (H)
+     --data-urlencode DATA  HTTP POST data url encoded (H)
+     --delegation STRING GSS-API delegation permission
+     --digest        Use HTTP Digest Authentication (H)
+     --disable-eprt  Inhibit using EPRT or LPRT (F)
+     --disable-epsv  Inhibit using EPSV (F)
+     --dns-servers    DNS server addrs to use: 1.1.1.1;2.2.2.2
+     --dns-interface  Interface to use for DNS requests
+     --dns-ipv4-addr  IPv4 address to use for DNS requests, dot notation
+     --dns-ipv6-addr  IPv6 address to use for DNS requests, dot notation
+ -D, --dump-header FILE  Write the headers to this file
+     --egd-file FILE  EGD socket path for random data (SSL)
+     --engine ENGINE  Crypto engine (SSL). "--engine list" for list
+ -f, --fail          Fail silently (no output at all) on HTTP errors (H)
+ -F, --form CONTENT  Specify HTTP multipart POST data (H)
+     --form-string STRING  Specify HTTP multipart POST data (H)
+     --ftp-account DATA  Account data string (F)
+     --ftp-alternative-to-user COMMAND  String to replace "USER [name]" (F)
+     --ftp-create-dirs  Create the remote dirs if not present (F)
+     --ftp-method [MULTICWD/NOCWD/SINGLECWD] Control CWD usage (F)
+     --ftp-pasv      Use PASV/EPSV instead of PORT (F)
+ -P, --ftp-port ADR  Use PORT with given address instead of PASV (F)
+     --ftp-skip-pasv-ip Skip the IP address for PASV (F)
+     --ftp-pret      Send PRET before PASV (for drftpd) (F)
+     --ftp-ssl-ccc   Send CCC after authenticating (F)
+     --ftp-ssl-ccc-mode ACTIVE/PASSIVE  Set CCC mode (F)
+     --ftp-ssl-control Require SSL/TLS for ftp login, clear for transfer (F)
+ -G, --get           Send the -d data with a HTTP GET (H)
+ -g, --globoff       Disable URL sequences and ranges using {} and []
+ -H, --header LINE   Custom header to pass to server (H)
+ -I, --head          Show document info only
+ -h, --help          This help text
+     --hostpubmd5 MD5  Hex encoded MD5 string of the host public key. (SSH)
+ -0, --http1.0       Use HTTP 1.0 (H)
+     --http1.1       Use HTTP 1.1 (H)
+     --http2.0       Use HTTP 2.0 (H)
+     --ignore-content-length  Ignore the HTTP Content-Length header
+ -i, --include       Include protocol headers in the output (H/F)
+ -k, --insecure      Allow connections to SSL sites without certs (H)
+     --interface INTERFACE  Specify network interface/address to use
+ -4, --ipv4          Resolve name to IPv4 address
+ -6, --ipv6          Resolve name to IPv6 address
+ -j, --junk-session-cookies Ignore session cookies read from file (H)
+     --keepalive-time SECONDS  Interval between keepalive probes
+     --key KEY       Private key file name (SSL/SSH)
+     --key-type TYPE Private key file type (DER/PEM/ENG) (SSL)
+     --krb LEVEL     Enable Kerberos with specified security level (F)
+     --libcurl FILE  Dump libcurl equivalent code of this command line
+     --limit-rate RATE  Limit transfer speed to this rate
+ -l, --list-only     List only mode (F/POP3)
+     --local-port RANGE  Force use of these local port numbers
+ -L, --location      Follow redirects (H)
+     --location-trusted like --location and send auth to other hosts (H)
+ -M, --manual        Display the full manual
+     --mail-from FROM  Mail from this address (SMTP)
+     --mail-rcpt TO  Mail to this/these addresses (SMTP)
+     --mail-auth AUTH  Originator address of the original email (SMTP)
+     --max-filesize BYTES  Maximum file size to download (H/F)
+     --max-redirs NUM  Maximum number of redirects allowed (H)
+ -m, --max-time SECONDS  Maximum time allowed for the transfer
+     --metalink      Process given URLs as metalink XML file
+     --negotiate     Use HTTP Negotiate Authentication (H)
+ -n, --netrc         Must read .netrc for user name and password
+     --netrc-optional Use either .netrc or URL; overrides -n
+     --netrc-file FILE  Set up the netrc filename to use
+ -N, --no-buffer     Disable buffering of the output stream
+     --no-keepalive  Disable keepalive use on the connection
+     --no-sessionid  Disable SSL session-ID reusing (SSL)
+     --noproxy       List of hosts which do not use proxy
+     --ntlm          Use HTTP NTLM authentication (H)
+     --oauth2-bearer TOKEN  OAuth 2 Bearer Token (IMAP, POP3, SMTP)
+ -o, --output FILE   Write output to <file> instead of stdout
+     --pass PASS     Pass phrase for the private key (SSL/SSH)
+     --post301       Do not switch to GET after following a 301 redirect (H)
+     --post302       Do not switch to GET after following a 302 redirect (H)
+     --post303       Do not switch to GET after following a 303 redirect (H)
+ -#, --progress-bar  Display transfer progress as a progress bar
+     --proto PROTOCOLS  Enable/disable specified protocols
+     --proto-redir PROTOCOLS  Enable/disable specified protocols on redirect
+ -x, --proxy [PROTOCOL://]HOST[:PORT] Use proxy on given port
+     --proxy-anyauth Pick "any" proxy authentication method (H)
+     --proxy-basic   Use Basic authentication on the proxy (H)
+     --proxy-digest  Use Digest authentication on the proxy (H)
+     --proxy-negotiate Use Negotiate authentication on the proxy (H)
+     --proxy-ntlm    Use NTLM authentication on the proxy (H)
+ -U, --proxy-user USER[:PASSWORD]  Proxy user and password
+     --proxy1.0 HOST[:PORT]  Use HTTP/1.0 proxy on given port
+ -p, --proxytunnel   Operate through a HTTP proxy tunnel (using CONNECT)
+     --pubkey KEY    Public key file name (SSH)
+ -Q, --quote CMD     Send command(s) to server before transfer (F/SFTP)
+     --random-file FILE  File for reading random data from (SSL)
+ -r, --range RANGE   Retrieve only the bytes within a range
+     --raw           Do HTTP "raw", without any transfer decoding (H)
+ -e, --referer       Referer URL (H)
+ -J, --remote-header-name Use the header-provided filename (H)
+ -O, --remote-name   Write output to a file named as the remote file
+     --remote-name-all Use the remote file name for all URLs
+ -R, --remote-time   Set the remote file's time on the local output
+ -X, --request COMMAND  Specify request command to use
+     --resolve HOST:PORT:ADDRESS  Force resolve of HOST:PORT to ADDRESS
+     --retry NUM   Retry request NUM times if transient problems occur
+     --retry-delay SECONDS When retrying, wait this many seconds between each
+     --retry-max-time SECONDS  Retry only within this period
+     --sasl-ir       Enable initial response in SASL authentication
+ -S, --show-error    Show error. With -s, make curl show errors when they occur
+ -s, --silent        Silent mode. Don't output anything
+     --socks4 HOST[:PORT]  SOCKS4 proxy on given host + port
+     --socks4a HOST[:PORT]  SOCKS4a proxy on given host + port
+     --socks5 HOST[:PORT]  SOCKS5 proxy on given host + port
+     --socks5-hostname HOST[:PORT] SOCKS5 proxy, pass host name to proxy
+     --socks5-gssapi-service NAME  SOCKS5 proxy service name for gssapi
+     --socks5-gssapi-nec  Compatibility with NEC SOCKS5 server
+ -Y, --speed-limit RATE  Stop transfers below speed-limit for 'speed-time' secs
+ -y, --speed-time SECONDS  Time for trig speed-limit abort. Defaults to 30
+     --ssl           Try SSL/TLS (FTP, IMAP, POP3, SMTP)
+     --ssl-reqd      Require SSL/TLS (FTP, IMAP, POP3, SMTP)
+ -2, --sslv2         Use SSLv2 (SSL)
+ -3, --sslv3         Use SSLv3 (SSL)
+     --ssl-allow-beast Allow security flaw to improve interop (SSL)
+     --stderr FILE   Where to redirect stderr. - means stdout
+     --tcp-nodelay   Use the TCP_NODELAY option
+ -t, --telnet-option OPT=VAL  Set telnet option
+     --tftp-blksize VALUE  Set TFTP BLKSIZE option (must be >512)
+ -z, --time-cond TIME  Transfer based on a time condition
+ -1, --tlsv1         Use TLSv1 (SSL)
+     --trace FILE    Write a debug trace to the given file
+     --trace-ascii FILE  Like --trace but without the hex output
+     --trace-time    Add time stamps to trace/verbose output
+     --tr-encoding   Request compressed transfer encoding (H)
+ -T, --upload-file FILE  Transfer FILE to destination
+     --url URL       URL to work with
+ -B, --use-ascii     Use ASCII/text transfer
+ -u, --user USER[:PASSWORD][;OPTIONS]  Server user, password and login options
+     --tlsuser USER  TLS username
+     --tlspassword STRING TLS password
+     --tlsauthtype STRING  TLS authentication type (default SRP)
+ -A, --user-agent STRING  User-Agent to send to server (H)
+ -v, --verbose       Make the operation more talkative
+ -V, --version       Show version number and quit
+ -w, --write-out FORMAT  What to output after completion
+     --xattr        Store metadata in extended file attributes
+ -q                 If used as the first parameter disables .curlrc
+plc5:~/workspace/javascript101/jsdom (master) $ curl -LO https://github.com/iamshaunjp/JavaScript-DOM-Tutorial/archive/master.zip
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   139    0   139    0     0    728      0 --:--:-- --:--:-- --:--:--   731
+  0     0    0   940    0     0   2516      0 --:--:-- --:--:-- --:--:--  2516
+plc5:~/workspace/javascript101/jsdom (master) $ ls
+JavaScript-DOM-Tutorial.git  master.zip
+plc5:~/workspace/javascript101/jsdom (master) $ unzip -j master.zip
+Archive:  master.zip
+70238544f76b3914c58e97ed676122d319945727
+  inflating: .DS_Store               
+  inflating: README.md               
+plc5:~/workspace/javascript101/jsdom (master) $ ls
+JavaScript-DOM-Tutorial.git  README.md  master.zip
+plc5:~/workspace/javascript101/jsdom (master) $ rm master.zip                                                                  
+plc5:~/workspace/javascript101/jsdom (master) $ ls
+JavaScript-DOM-Tutorial.git  README.md
+plc5:~/workspace/javascript101/jsdom (master) $ git add -A
+plc5:~/workspace/javascript101/jsdom (master) $ git commit -m "first comment"                                                  
+[master (root-commit) 53f51e6] first comment
+ 2 files changed, 1133 insertions(+)
+ create mode 100644 JavaScript-DOM-Tutorial.git
+ create mode 100644 README.md
+plc5:~/workspace/javascript101/jsdom (master) $ git status
+On branch master
+nothing to commit, working tree clean
+plc5:~/workspace/javascript101/jsdom (master) $ git checkout -b version1.0
+Switched to a new branch 'version1.0'
+plc5:~/workspace/javascript101/jsdom (version1.0) $ curl -LO https://github.com/iamshaunjp/JavaScript-DOM-Tutorial/archive/lesson-1.zip
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   141    0   141    0     0    748      0 --:--:-- --:--:-- --:--:--   750
+  0     0    0  2441    0     0   6701      0 --:--:-- --:--:-- --:--:-- 41372
+plc5:~/workspace/javascript101/jsdom (version1.0) $ ls
+JavaScript-DOM-Tutorial.git  README.md  lesson-1.zip
+plc5:~/workspace/javascript101/jsdom (version1.0) $ unzip -j lesson-1.zip
+Archive:  lesson-1.zip
+2c5fb265b51a85e0d01b3f6456df89b0ce0a7231
+replace .DS_Store? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: .DS_Store               
+replace README.md? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: README.md               
+  inflating: index.html              
+  inflating: styles.css              
+plc5:~/workspace/javascript101/jsdom (version1.0) $ git status
+On branch version1.0
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        index.html
+        lesson-1.zip
+        styles.css
+
+nothing added to commit but untracked files present (use "git add" to track)
+plc5:~/workspace/javascript101/jsdom (version1.0) $ rm lesson-1.zip
+plc5:~/workspace/javascript101/jsdom (version1.0) $ git status
+On branch version1.0
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        index.html
+        styles.css
+
+nothing added to commit but untracked files present (use "git add" to track)
+plc5:~/workspace/javascript101/jsdom (version1.0) $ git add -A
+plc5:~/workspace/javascript101/jsdom (version1.0) $ git commit -m "version 1.0"
+[version1.0 a6d6844] version 1.0
+ 2 files changed, 186 insertions(+)
+ create mode 100644 index.html
+ create mode 100644 styles.css
+plc5:~/workspace/javascript101/jsdom (version1.0) $ git status
+On branch version1.0
+nothing to commit, working tree clean
+plc5:~/workspace/javascript101/jsdom (version1.0) $ ls
+JavaScript-DOM-Tutorial.git  README.md  index.html  styles.css
+plc5:~/workspace/javascript101/jsdom (version1.0) $ git checkout master
+Switched to branch 'master'
+plc5:~/workspace/javascript101/jsdom (master) $ ls
+JavaScript-DOM-Tutorial.git  README.md
+plc5:~/workspace/javascript101/jsdom (master) $ git checkout version1.0
+Switched to branch 'version1.0'
+plc5:~/workspace/javascript101/jsdom (version1.0) $ ls
+JavaScript-DOM-Tutorial.git  README.md  index.html  styles.css
+plc5:~/workspace/javascript101/jsdom (version1.0) $ rm JavaScript-DOM-Tutorial.git 
+plc5:~/workspace/javascript101/jsdom (version1.0) $ ls
+README.md  index.html  styles.css
+plc5:~/workspace/javascript101/jsdom (version1.0) $ c9 index.html
+plc5:~/workspace/javascript101/jsdom (version1.0) $ ls
+README.md  index.html  styles.css
+plc5:~/workspace/javascript101/jsdom (version1.0) $ c9 styles.css
+plc5:~/workspace/javascript101/jsdom (version1.0) $ git status
+On branch version1.0
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    JavaScript-DOM-Tutorial.git
+
+no changes added to commit (use "git add" and/or "git commit -a")
+plc5:~/workspace/javascript101/jsdom (version1.0) $ git commit -a
+Aborting commit due to empty commit message.
+plc5:~/workspace/javascript101/jsdom (version1.0) $ git commit -a "rm"
+fatal: Paths with -a does not make sense.
+plc5:~/workspace/javascript101/jsdom (version1.0) $ git checkout -b version3.0
+D       JavaScript-DOM-Tutorial.git
+Switched to a new branch 'version3.0'
+plc5:~/workspace/javascript101/jsdom (version3.0) $ curl -LO https://github.com/iamshaunjp/JavaScript-DOM-Tutorial/archive/lesson-3.zip
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   141    0   141    0     0    765      0 --:--:-- --:--:-- --:--:--   770
+100  2740  100  2740    0     0   8601      0 --:--:-- --:--:-- --:--:--  8601
+plc5:~/workspace/javascript101/jsdom (version3.0) $ unzip -j lesson-3.zip
+Archive:  lesson-3.zip
+66f2a2e08055d6dd453e1de969d08296f3952964
+replace .DS_Store? [y]es, [n]o, [A]ll, [N]one, [r]ename: A
+  inflating: .DS_Store               
+  inflating: README.md               
+  inflating: app.js                  
+  inflating: index.html              
+  inflating: styles.css              
+plc5:~/workspace/javascript101/jsdom (version3.0) $ rm lesson-3.zip 
+plc5:~/workspace/javascript101/jsdom (version3.0) $ git status
+On branch version3.0
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    JavaScript-DOM-Tutorial.git
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        app.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+plc5:~/workspace/javascript101/jsdom (version3.0) $ git add -A
+plc5:~/workspace/javascript101/jsdom (version3.0) $ git committ -m "adding app.js"
+git: 'committ' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+plc5:~/workspace/javascript101/jsdom (version3.0) $ git status
+On branch version3.0
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        deleted:    JavaScript-DOM-Tutorial.git
+        new file:   app.js
+
+plc5:~/workspace/javascript101/jsdom (version3.0) $ c9 app.js
+plc5:~/workspace/javascript101/jsdom (version3.0) $ git status
+On branch version3.0
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        deleted:    JavaScript-DOM-Tutorial.git
+        new file:   app.js
+
+plc5:~/workspace/javascript101/jsdom (version3.0) $ git add -A
+plc5:~/workspace/javascript101/jsdom (version3.0) $ git committ -m "titles"
+git: 'committ' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+plc5:~/workspace/javascript101/jsdom (version3.0) $ git status
+On branch version3.0
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        deleted:    JavaScript-DOM-Tutorial.git
+        new file:   app.js
+
+plc5:~/workspace/javascript101/jsdom (version3.0) $ git log
+commit a6d68440066fc51b1eb9e01facbe0c50313e3003 (HEAD -> version3.0, version1.0)
+Author: Paul Costa <paulcosta.student@careerdevs.com>
+Date:   Tue Dec 11 23:58:39 2018 +0000
+
+    version 1.0
+
+commit 53f51e6c236cf974b0d6335e2e1571daa079081c (master)
+Author: Paul Costa <paulcosta.student@careerdevs.com>
+Date:   Tue Dec 11 23:43:30 2018 +0000
+
+    first comment
+plc5:~/workspace/javascript101/jsdom (version3.0) $ git status
+On branch version3.0
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        deleted:    JavaScript-DOM-Tutorial.git
+        new file:   app.js
+
+plc5:~/workspace/javascript101/jsdom (version3.0) $ git checkout -b vesion4.o
+D       JavaScript-DOM-Tutorial.git
+A       app.js
+Switched to a new branch 'vesion4.o'
+plc5:~/workspace/javascript101/jsdom (vesion4.o) $ git status
+On branch vesion4.o
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        deleted:    JavaScript-DOM-Tutorial.git
+        new file:   app.js
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   app.js
+
+plc5:~/workspace/javascript101/jsdom (vesion4.o) $ git add -A
+plc5:~/workspace/javascript101/jsdom (vesion4.o) $ git commit -m "const wrap = document.querySelector"
+[vesion4.o 781e648] const wrap = document.querySelector
+ 2 files changed, 2 insertions(+), 1131 deletions(-)
+ delete mode 100644 JavaScript-DOM-Tutorial.git
+ create mode 100644 app.js
+plc5:~/workspace/javascript101/jsdom (vesion4.o) $ git status
+On branch vesion4.o
+nothing to commit, working tree clean
+plc5:~/workspace/javascript101/jsdom (vesion4.o) $ git status
+On branch vesion4.o
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   app.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+plc5:~/workspace/javascript101/jsdom (vesion4.o) $ git add -A
+plc5:~/workspace/javascript101/jsdom (vesion4.o) $ git commit -m "querySelector("#book-list li:nth-child(2) .name")"           
+bash: syntax error near unexpected token `('
+plc5:~/workspace/javascript101/jsdom (vesion4.o) $ git log
+commit 781e6487396b2edf29dd3741b6855f0453722d33 (HEAD -> vesion4.o)
+Author: Paul Costa <paulcosta.student@careerdevs.com>
+Date:   Wed Dec 12 01:50:12 2018 +0000
+
+    const wrap = document.querySelector
+
+commit a6d68440066fc51b1eb9e01facbe0c50313e3003 (version3.0, version1.0)
+Author: Paul Costa <paulcosta.student@careerdevs.com>
+Date:   Tue Dec 11 23:58:39 2018 +0000
+
+    version 1.0
+
+commit 53f51e6c236cf974b0d6335e2e1571daa079081c (master)
+Author: Paul Costa <paulcosta.student@careerdevs.com>
+Date:   Tue Dec 11 23:43:30 2018 +0000
+
+    first comment
+plc5:~/workspace/javascript101/jsdom (vesion4.o) $ git checkout master
+error: Your local changes to the following files would be overwritten by checkout:
+        app.js
+Please commit your changes or stash them before you switch branches.
+Aborting
+plc5:~/workspace/javascript101/jsdom (vesion4.o) $ git add -A
+plc5:~/workspace/javascript101/jsdom (vesion4.o) $ git commit -m "book-list"
+[vesion4.o 9373ee4] book-list
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+plc5:~/workspace/javascript101/jsdom (vesion4.o) $ git status
+On branch vesion4.o
+nothing to commit, working tree clean
+plc5:~/workspace/javascript101/jsdom (vesion4.o) $ git checkout master
+Switched to branch 'master'
+plc5:~/workspace/javascript101/jsdom (master) $ git remote add origin git@github.com:Cohort5/jsdom.git
+plc5:~/workspace/javascript101/jsdom (master) $ git push -u origin master
+Warning: Permanently added 'github.com,192.30.253.113' (RSA) to the list of known hosts.
+Counting objects: 4, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 15.20 KiB | 5.07 MiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/Cohort5/jsdom/pull/new/master
+remote: 
+To github.com:Cohort5/jsdom.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+plc5:~/workspace/javascript101/jsdom (master) $ touch JSDOM(Lessons 1 - 4).txt
+bash: syntax error near unexpected token `('
+plc5:~/workspace/javascript101/jsdom (master) $ 
