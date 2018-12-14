@@ -68,7 +68,7 @@ console.log("book-list previous element sibling is:",bookList.previousElementSib
 
 bookList.previousElementSibling.querySelector("p").innerHTML += "<br/>Too cool for everyone else!";
 
-// DOM events/removing content - version9
+// DOM events/removing content - version9  
 //https://www.w3schools.com/jsref/dom_obj_event.asp = HTML DOM Events 
 
 var h2 = document.querySelector("#book-list h2");
@@ -77,6 +77,7 @@ h2.addEventListener("click", function(e){
     console.log(e);
 });
 
+///only affects selected element but you cannot add to it.
 var btns = document.querySelectorAll("#book-list.delete");
 Array.from(btns).forEach(function(btn){
     btn.addEventListener("click", function(e){
@@ -95,7 +96,47 @@ link.addEventListener("click", function(e){
     
 });
 
-// DOM Event Bubbling - version10
+// DOM Event Bubbling up - version10 - better than above code becuase you can add to it
+
+const list = document.querySelector('#book-list ul');
+
+// delete books
+list.addEventListener('click', (e) => {
+  if(e.target.className == 'delete'){
+    const li = e.target.parentElement;
+    //li.parentNode.removeChild(li); line below works better
+    list.removeChild(li);
+  }
+});
+
+// JSDOM Forms - version11 - reacting to submit events on forms
+
+document.forms[]
+
+const list = document.querySelector('#book-list ul');
+
+// delete books
+list.addEventListener('click', (e) => {
+  if(e.target.className == 'delete'){
+    const li = e.target.parentElement;
+    li.parentNode.removeChild(li);
+  }
+});
+
+const forms = document.forms;
+console.log(forms);
+console.log(forms['add-book']);
+
+Array.from(forms).forEach(function(form){
+  console.log(form);
+});
+
+const addForm = forms['add-book'];
+addForm.addEventListener('submit', function(e){
+  e.preventDefault();
+  const value = addForm.querySelector('input[type="text"]').value;
+  console.log(value);
+});
 
 
 
