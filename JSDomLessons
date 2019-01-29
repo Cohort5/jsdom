@@ -1,3 +1,4 @@
+/////TUESDAY 12 11 18
 plc5:~/workspace $
 plc5:~/workspace $ cd javascript101
 plc5:~/workspace/javascript101 (master) $ mkdir jsdom
@@ -292,4 +293,54 @@ To github.com:Cohort5/jsdom.git
 Branch master set up to track remote branch master from origin.
 plc5:~/workspace/javascript101/jsdom (master) $ touch JSDOM(Lessons 1 - 4).txt
 bash: syntax error near unexpected token `('
+plc5:~/workspace/javascript101/jsdom (master) $ 
+/////THURSDAY 12 13 18
+plc5:~/workspace $ cd javascript101
+plc5:~/workspace/javascript101 (master) $ cd jsdom
+plc5:~/workspace/javascript101/jsdom (master) $ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   JSDomLessons
+        modified:   app.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+plc5:~/workspace/javascript101/jsdom (master) $ git branch -a
+* master
+  version1.0
+  version3.0
+  vesion4.o
+  remotes/origin/master
+plc5:~/workspace/javascript101/jsdom (master) $ git checkout master
+M       JSDomLessons
+M       app.js
+Already on 'master'
+Your branch is up-to-date with 'origin/master'.
+plc5:~/workspace/javascript101/jsdom (master) $ git add -A
+plc5:~/workspace/javascript101/jsdom (master) $ git commit -m "DOM Event Bubbling up and Forms"
+[master 2cff414] DOM Event Bubbling up and Forms
+ 2 files changed, 44 insertions(+), 165 deletions(-)
+plc5:~/workspace/javascript101/jsdom (master) $ git push -u
+Warning: Permanently added 'github.com,192.30.253.112' (RSA) to the list of known hosts.
+Counting objects: 4, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 881 bytes | 881.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To github.com:Cohort5/jsdom.git
+   902a090..2cff414  master -> master
+Branch master set up to track remote branch master from origin.
+plc5:~/workspace/javascript101/jsdom (master) $ ls
+JSDomLessons  JavaScript-DOM-Tutorial.git  README.md  app.js
+plc5:~/workspace/javascript101/jsdom (master) $ git branch -a
+* master
+  version1.0
+  version3.0
+  vesion4.o
+  remotes/origin/master
 plc5:~/workspace/javascript101/jsdom (master) $ 
